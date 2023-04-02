@@ -1,0 +1,2 @@
+const $app=document.getElementById("app"),API="https://api.escuelajs.co/api/v1/products?offset=0&limit=10",main=async()=>{const a=await fetch(API),e=await a.json(),t=e?.map((a=>`\n        <artcle class ="Card">\n            <img src="${a.images[0]}">\n            <h2>\n                ${a.title} <small>Precio $ ${a.price}</small>\n            </h2>\n        </artcle>\n        `)).join("");let n=document.createElement("section");n.classList.add("Items"),n.innerHTML=t,$app.appendChild(n)};main();
+//# sourceMappingURL=index.ab7fb013.js.map
